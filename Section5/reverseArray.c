@@ -31,6 +31,15 @@ void reverseArrayRecursive(char *arr, int size)
     reverseArrayRecursive(arr, size);
 }
 
+void reverseArrayRecursive2(char *arr, int n)
+{
+    if(n > 1)
+    {
+        swap(arr, arr + n - 1);
+        reverseArrayRecursive2(arr+1, n-2);
+    }
+}
+
 void printArray(char *arr, int size)
 {
     for (int i = 0; i < size; i++)
@@ -45,7 +54,7 @@ int main()
     printArray(arr, sizeof(arr) / sizeof(char));
     printf("\n");
 
-    reverseArrayRecursive(arr, sizeof(arr) / sizeof(char));
+    reverseArrayRecursive2(arr, sizeof(arr) / sizeof(char));
     printArray(arr, sizeof(arr) / sizeof(char));
 
     return 0;
