@@ -35,5 +35,5 @@ int hasAlternatingSigns(int *arr, int size)
     {
         return 0;
     }
-    hasAlternatingSigns(arr +1, size - 1);
+    return hasAlternatingSigns(arr +1, size - 1);
 }
