@@ -34,3 +34,5 @@
 # VSCode Project Files
 .vscode
 
+# Makefiles
+Makefile
