@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int printAsBinary(int n);
-
+void printAsBinary(int n);
 
 int main()
 {
-    int n = 10;
-    int result;
-    result = printAsBinary(n);
+    int n = 18;
+    printAsBinary(n);
     return 0;
 }
 
-
-int printAsBinary(int n)
+void printAsBinary(int n)
 {
     if (n == 0)
-        return 0;
+    {
+        return;
+    }
     else
-        return (n % 2 + 10 *
-                printAsBinary(n / 2));    
+    {
+        printAsBinary(n / 2);
+        printf("%d", n % 2);
+    }
 }
